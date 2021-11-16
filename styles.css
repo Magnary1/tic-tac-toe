@@ -1,0 +1,43 @@
+h1 {
+    text-align: center;
+    margin: 80px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+    
+table {
+    height: 500px;
+    width: 500px;
+}
+    
+th, td {
+    border: 2px solid black;
+    width: 33px;
+    height: 33%;
+}
+
+.bottom {
+    border-bottom: 2px solid white;
+}
+
+.top {
+    border-top: 2px solid white;
+}
+
+.right {
+    border-right: 2px solid white;
+}
+
+.left {
+    border-left: 2px solid white;
+}
+
+
