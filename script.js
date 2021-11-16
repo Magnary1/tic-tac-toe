@@ -2,17 +2,23 @@ const squares = Array.from(document.querySelectorAll(`th`))
 
 squares.forEach(square => square.addEventListener(`click`, runGame))
 
-
+let counter = 0
 function runGame(e) {
 
     function displayChoice(e) {
-        e.target.textContent = `x`
+        if (e.target.textContent != "") {
+            return;
+        }
+        counter++
+        if (counter % 2 === 0) {
+            e.target.textContent = `X`
+        } else e.target.textContent = "O"
     }
 
     displayChoice(e)
 
     // CHECKING IF GAME IS WON
-    
+
     for (i = 0; i <= 2; i++) {
         if (squares[i].textContent != "" &&
             squares[i].textContent === squares[i + 3].textContent &&
@@ -44,6 +50,11 @@ function runGame(e) {
         alert(`you win! diag bottom left`);
         squares.forEach(square => square.textContent = "")
     }
+
+    // for (i=0;i<=8;i++) {
+    //     if (squares[i].textContent != "")
+    //     alert(`it's a tie!`)
+    // }
 
 
 }
